@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGP India DH Portal - Replica</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f9f4; }
+        .header { background-color: #0b1319; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-section { display: flex; align-items: center; gap: 10px; }
+        .logo { color: #00b050; font-weight: bold; font-size: 24px; }
+        .sub-logo { color: white; font-size: 12px; }
+        .banner { background-color: #00bcff; color: white; padding: 15px 20px; font-size: 20px; font-weight: bold; display: flex; justify-content: space-between; }
+        .main-container { display: flex; padding: 20px; gap: 40px; }
+        .profile-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; width: 250px; }
+        .profile-img { width: 100px; height: 100px; background-color: #1a4f9c; border-radius: 50%; margin: 0 auto 15px; position: relative; }
+        .profile-img::after { content: '🔒'; position: absolute; bottom: 0; right: 25px; font-size: 24px; }
+        .profile-name { font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+        .profile-id { color: #666; margin-bottom: 15px; }
+        .asset-section { flex-grow: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .asset-title { font-size: 22px; color: #333; margin-bottom: 20px; display: flex; justify-content: space-between; }
+        .status-dot { color: #00b050; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #4da6ff; color: white; }
+        .check-icon { color: #00b050; font-weight: bold; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Black Header -->
+    <div class="header">
+        <div class="logo-section">
+            <span class="logo">enel</span>
+            <span class="sub-logo">Green Power</span>
+        </div>
+        <div>Welcome, Anmol | <a href="#" style="color: white; text-decoration: none;">Logout</a></div>
+    </div>
+
+    <!-- Blue Sub Banner -->
+    <div class="banner">
+        <span>|| EGP India DH Portal</span>
+        <span>Dashboard</span>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="main-container">
+        
+        <!-- Left Side Profile Card -->
+        <div class="profile-card">
+            <div class="profile-img"></div>
+            <div class="profile-name">Anmol Verma - DH</div>
+            <div class="profile-id">🆔 ag51137</div>
+            <div style="color: #666; font-size: 14px; margin-top: 10px;">📞 +91 XXXXX XXXXX</div>
+        </div>
+
+        <!-- Right Side Assets Table -->
+        <div class="asset-section">
+            <div class="asset-title">
+                <span>My Assets</span>
+                <span class="status-dot">🟢 Portal SNOW On Update Sure Make</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>Status</th>
+                        <th>Asset</th>
+                        <th>OEM</th>
+                        <th>Model</th>
+                        <th>Serial No</th>
+                        <th>Assigned on</th>
+                        <th>Acknowledge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>🟢</td>
+                        <td>Head Phone</td>
+                        <td>Jabra</td>
+                        <td>Jabra Evolve 30</td>
+                        <td>-</td>
+                        <td>9/30/2025</td>
+                        <td class="check-icon">✓</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>🟢</td>
+                        <td>Laptop</td>
+                        <td>Lenovo</td>
+                        <td>ThinkPad L13</td>
+                        <td>R9136XEH</td>
+                        <td>8/21/2025</td>
+                        <td class="check-icon">✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
