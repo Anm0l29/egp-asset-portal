@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PODMAN_IMAGE = 'egp-asset-portal'
+        DOCKER_IMAGE = 'egp-asset-portal'
         PORT = '8085'
         TARGET_USER = 'ag51137'
     }
@@ -18,20 +18,20 @@ pipeline {
                 sh "python3 parse_user.py"
             }
         }
-        stage('podman Stack Build') {
+        stage('DOCKER Stack Build') {
             steps {
                 echo 'Building Production Container Image...'
-                sh "podman build -t ${DOCKER_IMAGE}:latest ."
+                sh "docker build -t ${DOCKER_IMAGE}:latest ."
             }
         }
         stage('Local Cluster Deploy') {
             steps {
                 echo 'Refreshing App Deployment on Port 8085...'
                 script {
-                    sh 'podman stop egp-portal-runtime || true'
-                    sh 'podman rm egp-portal-runtime || true'
+                    sh 'docker stop egp-portal-runtime || true'
+                    sh 'docker rm egp-portal-runtime || true'
                 }
-                sh "podman run -d --name egp-portal-runtime -p ${PORT}:80 ${DOCKER_IMAGE}:latest"
+                sh "docker run -d --name egp-portal-runtime -p ${PORT}:80 ${DOCKER_IMAGE}:latest"
             }
         }
     }
